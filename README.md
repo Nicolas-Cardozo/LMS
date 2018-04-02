@@ -1,2 +1,2 @@
 # LMS
-Repositório destinado à criação e produção do Learning Machine System.
+Branch destinado à confecção do modeli físico do Banco de Dados
