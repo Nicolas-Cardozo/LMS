@@ -6,7 +6,7 @@ CREATE TABLE Aluno (
 ,Nome VARCHAR(50) not null
 ,Email VARCHAR(50) not null 
 ,Celular VARCHAR(15) 
-,DtExpiracao DATE not null DEFAULT '1900-01-01'
+,DtExpiracao DATE not null CONSTRAINT dfAlunoDtExpiracao DEFAULT ('1900-01-01')
 ,RA VARCHAR(10) not null
 ,Foto VARCHAR(1000) null
 ,CONSTRAINT pkAluno PRIMARY KEY (IdAluno)
