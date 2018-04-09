@@ -4,14 +4,14 @@ IdCoordenador INT not null
 ,Nome VARCHAR(60) not null
 ,Data DATE not null CONSTRAINT dfData  DEFAULT(GETDATE())
 ,Status VARCHAR(10) not null CONSTRAINT dfStatus  DEFAULT 'Aberta' 
-,PlanoDeEnsino VARCHAR (MAX) not null
+,PlanoDeEnsino TEXT not null
 ,CargaHoraria INT not null
-,Competencia VARCHAR (MAX) not null
-,Habilidades VARCHAR (MAX) not null
-,Ementa VARCHAR (MAX) not null
-,ConteudoProgramatico VARCHAR (MAX) not null
-,BibliografiaBasica VARCHAR (MAX) not null
-,BibliografiaComplementar VARCHAR (MAX) not null
+,Competencia TEXT not null
+,Habilidades TEXT not null
+,Ementa TEXT not null
+,ConteudoProgramatico TEXT not null
+,BibliografiaBasica TEXT not null
+,BibliografiaComplementar TEXT not null
 ,PercentualPratico int not null
 ,PercentualTeorico int not null
 ,CONSTRAINT fkCoordenador FOREIGN KEY (IdCoordenador) REFERENCES Coordenador(IdCoordenador)
