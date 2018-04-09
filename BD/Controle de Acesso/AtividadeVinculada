@@ -1,0 +1,18 @@
+Create Table AtividadeVinculada
+(
+ID int NOT NULL,
+IdAtividade int UNIQUE NOT NULL,
+IdProfessor int NOT NULL,
+IdDiciplinaOfertada int NOT NULL,
+Rotulo varchar(3) NOT NULL,
+Status varchar(15) NOT NULL,
+DtInicioRespostas date NOT NULL,
+DtFimRespostas date NOT NULL,
+CONSTRAINT pkAtividadeVinculada PRIMARY KEY(ID),
+CONSTRAINT uqRotulo UNIQUE(Rotulo),
+CONSTRAINT uqAtividade UNIQUE(IdAtividade),
+CONSTRAINT uqDisciplina UNIQUE(IdDisciplina),
+CONSTRAINT fkAtividade FOREIGN KEY(IdAtividade) REFERENCES atividade (IdAtividade),
+CONSTRAINT fkProfessor FOREIGN KEY(IdProfessor) REFERENCES professor (IdProfessor),
+CONSTRAINT fkDisciplinaOfertada FOREIGN KEY(IdDisciplinaOfertada) REFERENCES DisciplinaOfertada (IdDisciplinaOfertada)
+);
