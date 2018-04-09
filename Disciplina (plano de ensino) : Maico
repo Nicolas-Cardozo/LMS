@@ -18,7 +18,7 @@ IdCoordenador INT not null
 ,CONSTRAINT pkIdDisciplina PRIMARY KEY (IdDisciplina)
 ,CONSTRAINT uqNome UNIQUE (Nome)
 ,CONSTRAINT uqStatus UNIQUE (Status)  
-,CONSTRAINT ckCargaHoraria CHECK (CargaHoraria IN (40,80))  
+,CONSTRAINT ckCargaHoraria CHECK (CargaHoraria IN (CargaHoraria >= 40 and CargaHoraria <= 80))  
 ,CONSTRAINT ckPercentualPratico CHECK (PercentualPratico between 00 and 100)  
 ,CONSTRAINT ckPercentualTeorico CHECK (PercentualTeorico between 00 and 100)  
 )
