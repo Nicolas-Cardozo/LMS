@@ -1,0 +1,23 @@
+CREATE TABLE DisciplinaOfertada(
+idDisc.Ofertada INT NOT NULL,
+IdCoordenador INT NOT NULL,
+DtInicioMatricula DATE NULL,
+DtFimMatricula DATE NULL,
+IdDisciplina INT NOT NULL,
+IdCurso INT NOT NULL,
+Ano INT NOT NULL,
+Semestre INT NOT NULL,
+Turma INT NOT NULL,
+IdProfessor INT NULL,
+Metodologia TEXT NULL,
+Recursos TEXT NULL,
+CriterioAvaliacao TEXT NULL,
+PlanoDeAulas TEXT NULL,
+CONSTRAINT pkidDisc.Ofertada PRIMARY KEY (idDisc.Ofertada),
+CONSTRAINT fkCoordenador FOREIGN KEY (IdCoordenador) REFERENCES Coordenador (IdCoordenador),
+CONSTRAINT fkDisciplina FOREIGN KEY (idDisciplina) REFERENCES Disciplina (IdDisciplina),
+CONSTRAINT fkCurso FOREIGN KEY (IdCurso) REFERENCES Curso (IdCurso),
+CONSTRAINT ckAno CHECK (Ano IN (Ano >= 1900 and Ano <= 2100)),
+CONSTRAINT ckSemestre CHECK (Semestre IN (Semestre >= 1 and Semestre <= 2)),
+CONSTRAINT ckTurma CHECK (Turma LIKE [A-Z])
+)
