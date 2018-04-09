@@ -1,0 +1,20 @@
+CREATE TABLE Entrega (
+IdEntrega INT NOT NULL
+IdAluno INT NOT NULL
+IdAtividadeVinculada INT NOT NULL
+Titulo VARCHAR (20) NOT NULL
+Resposta VARCHAR (MAX) NOT NULL
+DtEntrega DATE NOT NULL
+Status_E VARCHAR (40)
+IdProfessor INT NOT NULL
+Nota INT NOT NULL
+DtAvaliacao DATE NOT NULL
+Obs VARCHAR (MAX) NOT NULL
+CONSTRAINT pkIdEntrega PRIMARY KEY (IdEntrega)
+CONSTRAINT fkAluno FOREIGN KEY (IdAluno) REFERENCES Aluno (IdAluno)
+CONSTRAINT fkAtividadeVinculada FOREIGN KEY (IdAtividadeVinculada) REFERENCES AtividadeVinculada (IdAtividadeVinculada)
+CONSTRAINT dfDtEntrega DEFAULT (GETDATE())
+CONSTRAINT ckStatus_E DEFAULT "Entregue" CHECK (Status_E like "Entregue","Corrigido")
+CONSTRAINT fkProfessor FOREIGN KEY (IdProfessor) REFERENCES Professor(IdProfessor)
+CONSTRAINT ckNota CHECK (Nota >= 0.00 and Nota <= 10.00)
+)
