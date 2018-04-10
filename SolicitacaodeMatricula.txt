@@ -1,5 +1,5 @@
 CREATE TABLE SolicitacaodeMatricula(
-IDSolicitacaoMatricula INT NOT NULL,
+IDSolicitacaoMatricula INT NOT NULL IDENTITY (1,1),
 IdAluno INT NOT NULL,
 IdDisc.Ofertada INT NULL,
 DtSolicitacao DATE NOT NULL,
@@ -7,5 +7,5 @@ IdCoordenador INT NULL,
 CK_Status NOT NULL,
 CONSTRAINT IDSolicitacaoMatricula PRIMARY KEY (IDSolicitacaoMatricula),
 CONSTRAINT dfDtSolicitacao DEFAULT (GET DATE()),
-CONSTRAINT CK_Status DEFAULT "Solicitação" CHECK (CK_Status LIKE 'Solicitada','Aprovada','Rejeitada','Cancelada')
+CONSTRAINT CK_Status DEFAULT "SolicitaÃ§Ã£o" CHECK (CK_Status LIKE 'Solicitada','Aprovada','Rejeitada','Cancelada')
 )
