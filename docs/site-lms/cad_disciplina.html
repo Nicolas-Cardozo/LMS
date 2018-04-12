@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Universidade</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+<div class="header">
+  <img class="img_banner" src="imagens/uni-tecnologia2.jpg"/>
+</div>
+
+<div class="menu">
+	<ul class="menu">
+	  <li class="menu"><a href="index.html">Home</a></li>
+	  <li class="dropdown">
+		<a href="javascript:void(0)" class="dropbtn">Cursos</a>
+		<div class="dropdown-content">
+	  	  <a href="cursos.html">Nossos Cursos</a>
+		  <a href="detalhescursos.html">Detalhes de Curso</a>
+		 
+		  <a href="novocurso.html">Novo Curso</a>
+		</div>
+	  </li>
+
+	  <li class="dropdown">
+		<a href="javascript:void(0)" class="dropbtn">Disciplinas</a>
+		<div class="dropdown-content">
+		  <a href="#">Nova Disciplina</a>
+		  <a href="#">Detalhes de Disciplinas</a>
+		   <a href="#">Disciplinas de Curso</a>
+		</div>
+	  </li>
+	  <li style="float:right" class="menu"><a href="login.html">Login</a></li> 
+	</ul>
+</div>
+
+
+
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+     
+   <div class="disciplina">
+
+<h2>Cadastro de Nova Disciplina</h2>
+
+  <form name="formdisciplina" action="" method="post">
+	<p>Codigo do Curso:<br>
+	<input type="text" name="curso" size="40"></p>
+	
+	<p>Semestre:<br>
+	  <select name="semestre">
+			  <option value="0"></option>	
+	    <option value="1">1° Semestre</option>
+	    <option value="2">2° Semestre</option>
+	    <option value="3">3° Semestre</option>
+	    <option value="4">4° Semestre</option>
+	    <option value="5">5° Semestre</option>
+	    <option value="6">6° Semestre</option>
+	    <option value="7">7° Semestre</option>
+	    <option value="8">8° Semestre</option>
+    </select> </p>
+
+
+		<p>Disciplina:<br>
+	<input type="text" name="disciplina" size="40"></p>
+
+	<p>Professor:<br>
+    <input type="text" name="professor" size="40"></p>
+
+	<p>Descrição:<br>
+    <textarea name="Mensagem" rows="5" cols="50"></textarea></p>
+
+	<p><input type="submit" value="Cadastrar"></p>
+
+  </form>
+</div>
+
+	
+    </div>
+    
+ 
+  </div>
+  
+  <div class="rightcolumn">
+    <div class="card">
+     <h2 id="smart">Conheça o Classfuture</h2>
+	
+		<p>	As salas de aula da Universidade são equipadas com lousas eletrônicas, que capturam todos os pontos
+		das aulas <strong>presenciais</strong>, como voz, escrita <strong>dinâmica</strong>, vídeos e navegação do professor. Todo o conteúdo é
+		gravado e disponibilizado em uma sala de ensino virtual para que o aluno assista quando e onde quiser, de
+		qualquer plataforma digital.</p> 
+    </div>
+    
+    <div class="card">
+     
+    <h2 id="eventos">Pŕoximos Eventos</h2>
+	<p>Confira os próximos eventos que os alunos e a Universidade irão participar:</p>
+      
+    </div>
+   
+  </div>
+</div>
+
+<div class="footer">
+ <hr>
+  <h3>Universidade de Tecnologia 2018 - Todos os direitos reservados.</h3>
+  <hr>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Universidade</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+<div class="header">
+  <img class="img_banner" src="imagens/uni-tecnologia2.jpg"/>
+</div>
+
+<div class="menu">
+	<ul class="menu">
+	  <li class="menu"><a href="index.html">Home</a></li>
+	  <li class="dropdown">
+		<a href="javascript:void(0)" class="dropbtn">Cursos</a>
+		<div class="dropdown-content">
+	  	  <a href="cursos.html">Nossos Cursos</a>
+		  <a href="detalhescursos.html">Detalhes de Curso</a>
+		  
+		  <a href="novocurso.html">Novo Curso</a>
+		</div>
+	  </li>
+
+	  <li class="dropdown">
+		<a href="javascript:void(0)" class="dropbtn">Disciplinas</a>
+		<div class="dropdown-content">
+		  <a href="cad_disciplina.html">Nova Disciplina</a>
+		  <a href="#">Detalhes de Disciplinas</a>
+		  <a href="#">Disciplinas de Curso</a>
+		</div>
+	  </li>
+	  <li style="float:right" class="menu"><a href="login.html">Login</a></li> 
+	</ul>
+</div>
+
+
+
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+     
+    	<h2 class="novo_curso">Cadastro de novos cursos</h2>
+	
+	<p>
+    <form class="novo_curso">
+        Codigo do curso: 
+        <input type="text" name="" placeholder="Digite o código do curso">
+		<p></p>
+        Curso: 
+        <input type="text" name="novo curso" placeholder="Digite o nome do curso">
+		<p></p>
+		Coordenador do curso:
+		<input type="text" name="coordenador" placeholder="Digite o nome do coordenador">
+    </form>
+	<p class="novo_curso">Escolha o nível do curso:
+		<select name="" class="novo_curso">
+			<option> </option>
+			<option value="">Bacharel</option>
+			<option value="">Tecnico</option>
+		</select>
+		<p></p>	
+	<p class="novo_curso">Selecione o periodo
+	<select name="" class="novo_curso">
+		<option> </option>
+		<option value="">Matutino</option>
+		<option value="">Norturno</option>
+	</select>
+	<p></p>
+	<input type="button" onclick="alert('Novo curso adicionado!')" value="Finalizar!">
+	
+    </div>
+    
+ 
+  </div>
+  
+  <div class="rightcolumn">
+    <div class="card">
+     <h2 id="smart">Conheça o Futureclass</h2>
+	
+		<p>	As salas de aula da Universidade são equipadas com lousas eletrônicas, que capturam todos os pontos
+		das aulas <strong>presenciais</strong>, como voz, escrita <strong>dinâmica</strong>, vídeos e navegação do professor. Todo o conteúdo é
+		gravado e disponibilizado em uma sala de ensino virtual para que o aluno assista quando e onde quiser, de
+		qualquer plataforma digital.</p> 
+    </div>
+    
+    <div class="card">
+     
+    <h2 id="eventos">Pŕoximos Eventos</h2>
+	<p>Confira os próximos eventos que os alunos e a Universidade irão participar:</p>
+      
+    </div>
+   
+  </div>
+</div>
+
+<div class="footer">
+ <hr>
+  <h3>Universidade de Tecnologia 2018 - Todos os direitos reservados.</h3>
+  <hr>
+</div>
+
+
+</body>
+</html>
