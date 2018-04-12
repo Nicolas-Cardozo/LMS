@@ -1,0 +1,72 @@
+/* index */
+
+body {
+    background-color: #E6E6E6;
+}
+
+font {
+    color: black;
+	text-align: center;
+	font-style: calibri;
+	font-size: 30px
+}
+
+
+.letras {
+	text-align: center;
+	font-style: calibri;
+	font-size: 30px;
+	color: #3B0B0B
+}
+
+.cabeçalho {
+	line-height: 65px;
+	background-color: #8A0808;
+	text-align: right-side;
+}
+
+input[type=botao] {
+    width: 9%;
+    background-color: #FA5882;
+    color: white;
+    padding: 15px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+	font-style: arial;
+	font-size: 11px;
+	font-weight: bold
+	
+}
+
+input[type=botao]:hover {
+    background-color: #610B21;
+	font-size: 13px;
+	font-weight: bold
+}
+
+input[type=login] {
+    width: 6%;
+    background-color: #E6E6E6;
+    color: black;
+    padding: 15px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    text-align: center;
+	font-style: arial;
+	font-size: 14px;
+	font-weight: bold
+	
+}
+
+input[type=login]:hover {
+    background-color: #A4A4A4;
+	color: white;
+	font-size: 16px;
+	font-weight: bold
+}
+
