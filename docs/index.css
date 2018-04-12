@@ -4,13 +4,18 @@ body {
     background-color: #E6E6E6;
 }
 
-font {
+h2 {
     color: black;
 	text-align: center;
 	font-style: calibri;
 	font-size: 30px
 }
 
+font {
+    color: black;
+	text-align: center;
+	font-style: arial;
+}
 
 .letras {
 	text-align: center;
@@ -26,7 +31,7 @@ font {
 }
 
 input[type=botao] {
-    width: 9%;
+    width: 8%;
     background-color: #FA5882;
     color: white;
     padding: 15px 20px;
@@ -47,6 +52,29 @@ input[type=botao]:hover {
 	font-weight: bold
 }
 
+input[type=first] {
+    width: 8%;
+    background-color: #FA5882;
+    color: white;
+    padding: 15px 20px;
+    margin-left: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+	font-style: arial;
+	font-size: 11px;
+	font-weight: bold
+	
+}
+
+input[type=first]:hover {
+    background-color: #610B21;
+	font-size: 15px;
+	font-weight: bold
+}
+
+
 input[type=login] {
     width: 6%;
     background-color: #E6E6E6;
@@ -66,7 +94,7 @@ input[type=login] {
 input[type=login]:hover {
     background-color: #A4A4A4;
 	color: white;
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: bold
 }
 
