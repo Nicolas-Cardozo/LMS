@@ -162,7 +162,8 @@ constraint uqatividadevinculada unique (idatividade, idDiscOfertada, rotulo)
 )
 
 --Entrega--
-CREATE TABLE Entrega (
+CREATE TABLE Entrega 
+(
 IdEntrega INT NOT NULL,
 IdAluno INT NOT NULL,
 IdAtividadeVinculada INT NOT NULL,
@@ -171,32 +172,26 @@ Resposta VARCHAR (MAX) NOT NULL,
 DtEntrega DATE NOT NULL,
 Status_E VARCHAR (40),
 IdProfessor INT NOT NULL,
-Nota FLOAT NOT NULL,
-DtAvaliacao DATE NOT NULL,
+Nota INT NOT NULL,
+DtAvaliacao DATE NOT NULL DEFAULT (getdate()),
 Obs VARCHAR (MAX) NOT NULL,
 CONSTRAINT pkIdEntrega PRIMARY KEY (IdEntrega),
 CONSTRAINT fkAluno FOREIGN KEY (IdAluno) REFERENCES Aluno (IdAluno),
 CONSTRAINT fkAtividadeVinculada FOREIGN KEY (IdAtividadeVinculada) REFERENCES AtividadeVinculada (IdAtividadeVinculada),
-CONSTRAINT dfDtEntrega DEFAULT (GETDATE()) FOR DtEntrega,
-CONSTRAINT ckStatus_E DEFAULT 'Entregue' FOR Status_E, CHECK (Status_E LIKE 'Entregue' OR Status_E LIKE'Corrigido'),
-CONSTRAINT fkProfessor FOREIGN KEY (IdProfessor) REFERENCES Professor(IdProfessor),
+CONSTRAINT ckStatus_E CHECK (Status_E in ('Entregue','Corrigido')),
+CONSTRAINT fkEntregaProfessor FOREIGN KEY (IdProfessor) REFERENCES Professor(IdProfessor),
 CONSTRAINT ckNota CHECK (Nota >= 0.00 and Nota <= 10.00)
 )
 
 --Solicitação de Matrícula--
-CREATE TABLE SolicitacaodeMatricula(
-IDSolicitacaoMatricula INT NOT NULL IDENTITY (1,1),
+CREATE TABLE SolicitacaoMatricula 
+(
+IDSolicitacaoMatricula INT NOT NULL,
 IdAluno INT NOT NULL,
 IdDiscOfertada INT NULL,
-DtSolicitacao DATE NOT NULL,
+DtSolicitacao DATE NOT NULL DEFAULT (getdate()),
 IdCoordenador INT NULL,
-Status VARCHAR(15) NOT NULL
+Status_SM varchar(15) NOT NULL,
+CONSTRAINT IDSolicitacaoMatricula PRIMARY KEY (IDSolicitacaoMatricula),
+CONSTRAINT CK_Status CHECK (Status_SM in ('Solicitada' , 'Aprovada' , 'Rejeitada' , 'Cancelada'))
 )
-ALTER TABLE SolicitacaodeMatricula
-ADD CONSTRAINT IDSolicitacaoMatricula PRIMARY KEY (IDSolicitacaoMatricula)
-GO
-ALTER TABLE SolicitacaodeMatricula
-ADD CONSTRAINT dfDtSolicitacao DEFAULT (GETDATE()) FOR DtSolicitacao
-GO
-ALTER TABLE SolicitacaodeMatricula
-ADD CONSTRAINT CK_Status DEFAULT 'Solicitada' FOR Status, CHECK (Status LIKE 'Solicitada' or Status LIKE 'Aprovada' or Status LIKE 'Rejeitada' or Status LIKE 'Cancelada')
