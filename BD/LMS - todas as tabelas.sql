@@ -162,8 +162,7 @@ constraint uqatividadevinculada unique (idatividade, idDiscOfertada, rotulo)
 )
 
 --Entrega--
-CREATE TABLE Entrega 
-(
+CREATE TABLE Entrega (
 IdEntrega INT NOT NULL,
 IdAluno INT NOT NULL,
 IdAtividadeVinculada INT NOT NULL,
@@ -172,14 +171,15 @@ Resposta VARCHAR (MAX) NOT NULL,
 DtEntrega DATE NOT NULL,
 Status_E VARCHAR (40),
 IdProfessor INT NOT NULL,
-Nota INT NOT NULL,
-DtAvaliacao DATE NOT NULL DEFAULT (getdate()),
+Nota FLOAT NOT NULL,
+DtAvaliacao DATE NOT NULL,
 Obs VARCHAR (MAX) NOT NULL,
 CONSTRAINT pkIdEntrega PRIMARY KEY (IdEntrega),
 CONSTRAINT fkAluno FOREIGN KEY (IdAluno) REFERENCES Aluno (IdAluno),
 CONSTRAINT fkAtividadeVinculada FOREIGN KEY (IdAtividadeVinculada) REFERENCES AtividadeVinculada (IdAtividadeVinculada),
-CONSTRAINT ckStatus_E CHECK (Status_E in ('Entregue','Corrigido')),
-CONSTRAINT fkEntregaProfessor FOREIGN KEY (IdProfessor) REFERENCES Professor(IdProfessor),
+CONSTRAINT dfDtEntrega DEFAULT (GETDATE()) FOR DtEntrega,
+CONSTRAINT ckStatus_E DEFAULT 'Entregue' FOR Status_E, CHECK (Status_E LIKE 'Entregue' OR Status_E LIKE'Corrigido'),
+CONSTRAINT fkProfessor FOREIGN KEY (IdProfessor) REFERENCES Professor(IdProfessor),
 CONSTRAINT ckNota CHECK (Nota >= 0.00 and Nota <= 10.00)
 )
 
