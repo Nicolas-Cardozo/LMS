@@ -195,5 +195,43 @@ IdCoordenador INT NULL,
 Status_SM int NOT NULL,
 CONSTRAINT IDSolicitacaoMatricula PRIMARY KEY (IDSolicitacaoMatricula),
 CONSTRAINT dfDtSolicitacao DEFAULT (GETDATE()),
-CONSTRAINT CK_Status CHECK (Status_SM in ('Solicitada' , 'Aprovada' , 'Rejeitada' , 'Cancelada'))
+CONSTRAINT Status_SM CHECK (Status_SM in ('Solicitada' , 'Aprovada' , 'Rejeitada' , 'Cancelada'))
 )
+
+
+
+
+
+As duas tabelas que consegui executar no meu computador
+----------------------------------------------------------
+CREATE TABLE Entrega (
+IdEntrega INT NOT NULL,
+IdAluno INT NOT NULL,
+IdAtividadeVinculada INT NOT NULL,
+Titulo VARCHAR (20) NOT NULL,
+Resposta VARCHAR (1000) NOT NULL,
+DtEntrega DATE NOT NULL,
+Status_E VARCHAR (40),
+IdProfessor INT NOT NULL,
+Nota INT NOT NULL,
+DtAvaliacao DATE NOT NULL,
+Obs VARCHAR (1000) NOT NULL,
+CONSTRAINT pkIdEntrega PRIMARY KEY (IdEntrega),
+CONSTRAINT fkAluno FOREIGN KEY (IdAluno) REFERENCES Aluno (IdAluno),
+CONSTRAINT fkAtividadeVinculada FOREIGN KEY (IdAtividadeVinculada) REFERENCES AtividadeVinculada (IdAtividadeVinculada),
+CONSTRAINT ckStatus_E CHECK (Status_E in ('Entregue','Corrigido')),
+CONSTRAINT fkProfessor FOREIGN KEY (IdProfessor) REFERENCES Professor(IdProfessor),
+CONSTRAINT ckNota CHECK (Nota >= 0.00 and Nota <= 10.00)
+);
+
+
+CREATE TABLE SolicitacaodeMatricula(
+IDSolicitacaoMatricula INT NOT NULL,
+IdAluno INT NOT NULL,
+IdDiscOfertada INT NULL,
+DtSolicitacao DATE NOT NULL,
+IdCoordenador INT NULL,
+CK_Status VARCHAR(100) NOT NULL DEFAULT 'Solicitação',
+CONSTRAINT IDSolicitacaoMatricula PRIMARY KEY (IDSolicitacaoMatricula),
+CONSTRAINT CK_Status CHECK (CK_Status LIKE 'Solicitada''Aprovada''Rejeitada''Cancelada')
+);
