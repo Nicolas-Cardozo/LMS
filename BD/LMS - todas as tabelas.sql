@@ -184,14 +184,19 @@ CONSTRAINT ckNota CHECK (Nota >= 0.00 and Nota <= 10.00)
 )
 
 --Solicitação de Matrícula--
-CREATE TABLE SolicitacaoMatricula 
-(
-IDSolicitacaoMatricula INT NOT NULL,
+CREATE TABLE SolicitacaodeMatricula(
+IDSolicitacaoMatricula INT NOT NULL IDENTITY (1,1),
 IdAluno INT NOT NULL,
 IdDiscOfertada INT NULL,
-DtSolicitacao DATE NOT NULL DEFAULT (getdate()),
+DtSolicitacao DATE NOT NULL,
 IdCoordenador INT NULL,
-Status_SM int NOT NULL,
-CONSTRAINT IDSolicitacaoMatricula PRIMARY KEY (IDSolicitacaoMatricula),
-CONSTRAINT CK_Status CHECK (Status_SM in ('Solicitada' , 'Aprovada' , 'Rejeitada' , 'Cancelada'))
+Status VARCHAR(15) NOT NULL
 )
+ALTER TABLE SolicitacaodeMatricula
+ADD CONSTRAINT IDSolicitacaoMatricula PRIMARY KEY (IDSolicitacaoMatricula)
+GO
+ALTER TABLE SolicitacaodeMatricula
+ADD CONSTRAINT dfDtSolicitacao DEFAULT (GETDATE()) FOR DtSolicitacao
+GO
+ALTER TABLE SolicitacaodeMatricula
+ADD CONSTRAINT CK_Status DEFAULT 'Solicitada' FOR Status, CHECK (Status LIKE 'Solicitada' or Status LIKE 'Aprovada' or Status LIKE 'Rejeitada' or Status LIKE 'Cancelada')
