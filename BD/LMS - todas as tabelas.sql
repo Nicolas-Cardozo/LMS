@@ -6,7 +6,7 @@ Nome varchar(20)NOT NULL,
 Email varchar(30)NOT NULL,
 Celular int NOT NULL,
 Senha int NOT NULL,
-DtExpiração datetime NOT NULL,
+DtExpiraÃ§Ã£o datetime NOT NULL,
 Constraint pkPessoa PRIMARY KEY(login)
 )
 
@@ -127,7 +127,7 @@ IdDisciplina INT NOT NULL,
 IdCurso INT  NOT NULL,
 Ano INT  NOT NULL,
 Semestre INT  NOT NULL,
-Turma INT  NOT NULL,
+Turma varchar(2)  NOT NULL,
 IdProfessor INT NULL,
 Metodologia TEXT NULL,
 Recursos TEXT NULL,
@@ -184,7 +184,7 @@ CONSTRAINT fkProfessor FOREIGN KEY (IdProfessor) REFERENCES Professor(IdProfesso
 CONSTRAINT ckNota CHECK (Nota >= 0.00 and Nota <= 10.00)
 )
 
---Solicitação de Matrícula--
+--SolicitaÃ§Ã£o de MatrÃ­cula--
 CREATE TABLE SolicitacaoMatricula 
 (
 IDSolicitacaoMatricula INT NOT NULL,
