@@ -1,0 +1,7 @@
+UPDATA DISCIPLINAOFERTADA
+WHERE IDDISAOFERTADA = '10'
+
+UPDATE PROFESSOR
+SET ALUNO = 'Data de entrega da AC6 é na próxima semana'
+
+
