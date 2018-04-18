@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Matricula</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="estilo.css" />
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+        <h3 class="matricula">Mátricula</h3>
+        <h3 class="ads">Análise e Desenvolvimento de Sistemas</h3>
+        
+        <p>O tecnólogo com esta formação desenvolve, analisa, projeta,implementa,atualiza sistemas de informação. Tem noções de gerenciamento, mas sua especialidade é a criação de sistemas informatizados:programação de computadores e desenvolvimento d softwares para ampliar a capacidade dos recursos do equipamento. Ele implanta e desenvolve banco de dados. Conhece a estrutura física dos equipamentos e seus periféricos e precisa se manter muito atualizado sobre aplicativos,ambientes operacionais e linguagens de programação.Além disso, precisa ter boa noção dos negócios da companhia para a qual trabalha.</p>	
+        
+        <p>1º SEMESTRE - TURMA ADS 1B</p>
+        <ul style="list-style-type: none">
+            <li>Comunicação e Expressão: 80 horas </li>
+            <li>Fundamentos de Banco de Dados: 80 horas</li>
+            <li>Introdução à Internet das Coisas - IoT: 80 horas</li>
+            <li>Linguagem de Programação I: 80 horas</li>
+            <li>Lógica de Programação: 80 horas </li>
+            <li>Matemática Aplicada: 80 horas</li><br>
+            <li>Subtotal: 480 horas</li>
+        </ul>
+        
+         <h3 class="ads">Detalhes sobre linguagem de programação</h3>
+        <p>Habilidades</p>
+        <ul style="list-style-type:none">
+                <li>Conhecer as etapas de geração de um programa</li>
+                <li>Conhecer e dominar as estruturas básicas de controle de fluxo na linguagem de programação</li>
+                <li>Java</li>
+                <li>Desenvolver a técnica de refinamentos sucessivos na solução de problemas, aprendendo a
+                decompor um problema em sub-tarefas ou módulos</li>
+                <li>Conhecer a manipulação das estruturas de dados na linguagem de programação Java </li>
+        </ul>
+        <p>Competências</p>
+        <ul style="list-style-type:none">
+                <li>Compreender os conceitos envolvidos na geração de um programa</li>
+                <li>Linguagem de Programação, Paradigmas de Programação, Compreender as etapas de um
+                compilador. Diferenciar tipos de linguagem.</li>
+                <li>Desenvolver programas em uma linguagem de programação Java.</li>
+                <li>Aprender a implementação de estruturas básicas de controle de fluxo e estruturas de dados
+                homogêneas na linguagem Java.</li>
+        </ul>
+        <p>Conteúdo Programático</p>
+        <ul style="list-style-type:none">
+                <li>Introdução e Conceitos</li>
+                <li>Software, Programa, Linguagem de Programação</li>
+                <li>Tipos e Paradigmas de Linguagem de Programação</li>
+                <li>Interpretador e Compilador, etapas de compilação</li>
+                <li>Linguagem Java:história e estrutura básica de um programa</li>
+                <li>Abordar na Linguagem de Programação Java</li>
+                <li>Tipos de Dados: Constantes. Variáveis. Instruções básicas. Operadores aritméticos, lógicos e
+                relacionais</li>
+                <li>Manipulação de dados de entrada e saída utilizando o JOptionPane</li>
+                <li>Estruturas lógicas ou de controle de fluxo:</li>
+                <li>Estruturas seqüências</li>
+                <li>Estruturas condicionais ou de seleção: Simples. Composta. Encadeada ou Aninhada. Múltipla
+                escolha</li>
+                <li>Estruturas lógicas de repetição: Repetição com teste no início. Repetição com teste no final.</li>
+                <li>Repetição com variável de controle</li>
+                <li>Modularização: Definição e Vantagens. Escopo dos Dados e do Código. Componentes de um
+                Módulo. Parâmetro de Entrada e Saída. Tipos de módulos: Função e Procedimento. Criando
+                Funções e Procedimentos. Chamando Funções e Procedimentos. Passagem de Parâmetros: por
+                valor e por referência</li>
+                <li>Introdução às Estruturas de Dados: Tipos de Dados simples e compostos</li>
+                <li>Estruturas de Dados Homogêneas: Estrutura de Dados Unidimensional: Vetores. Cadeia de
+                Caracteres. Métodos de Busca ( Busca Linear e Busca Binária). Métodos de Ordenação (Método
+                Bolha, Método Inserção). </li>
+        </ul>
+        <p>Bibliografia Básica</p>
+        <ul style="list-style-type:none">
+                <li>DEITEL, H. M.; DEITEL, P. J. Java – Como Programar. 8.ed. São Paulo: Pearson Prentice Hall,
+                2010.</li>
+                <li>FARRELL, J. Lógica e Design de Programação – Introdução. 1.ed. São Paulo: Cengage,
+                2010.</li>
+                <li>PUGA, S. & RISSETI, G. Lógica de Programação e Estruturas de Dados: com aplicações em
+                Java. 2.ed. São Paulo: Pearson Prentice Hall, 2008.</li>
+        </ul>
+        <h2 class="inscritos">Inscritos na Disciplina</h2>
+       <form class="tabela">
+       <table>
+        <tr>
+        <th class="tabela">RA</th>
+        <th class="tabela">Nome</th>
+        </tr>
+        <tr>
+        <td>000000</td>
+        <td>Fulano</td>
+        </tr>
+        <tr>
+        <td>000000</td>
+        <td>Fulano</td>
+        </tr>
+        <td>000000</td>
+        <td>Fulano</td>
+        </tr>
+        <tr>
+        <td>000000</td>
+        <td>Fulano</td>
+        </tr>
+        <td>000000</td>
+        <td>Fulano</td>
+        </tr>
+        <tr>
+        <td>000000</td>
+        <td>Fulano</td>
+        </tr>
+        <td>000000</td>
+        <td>Fulano</td>
+        </tr>
+        <tr>
+        <td>000000</td>
+        <td>Fulano</td>
+        </tr>
+       </table>
+      <p></p>
+       <input class="botao" type="submit" value="Submit">
+      </form>
+    
+</body>
+</html>
