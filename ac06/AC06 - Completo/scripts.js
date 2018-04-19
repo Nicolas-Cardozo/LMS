@@ -50,7 +50,7 @@ function(event){
   
 }
 
-document.getElementById("campocpf").onsubmit=
+document.getElementById("cpf").onsubmit=
   function validaCPF(cpf) {
     var numeros, digitos, soma, i, resultado, digitos_iguais;
     digitos_iguais = 1;
