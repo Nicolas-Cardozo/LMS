@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Novo Aluno</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="estilo.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <h3>Cadastro de alunos</h3>
+    <div class="novo-aluno">
+    <form>
+        <p>Login:
+        <input type="text" id="login" name="Login" placeholder="Ex: impacta123"></p>
+        <p>Nome Completo:
+            <input type="text" id="nome" name="Nome" placeholder="Ex: Fulano da Silva"></p>
+        <p>E-mail:
+            <input type="email" id="email" name="" placeholder="Ex: aluno@impacta.com.br">
+        </p>
+        <p>Celular:
+            <input type="tel" id="" name="" placeholder="Ex:(11)1234-5678">
+        </p>
+        <p>Nascimento:
+            <input type="date" id="dataNasc" name="" placeholder="Ex: 07/04/1997">
+        </p>
+        <p>CPF:
+            <input type="number" id="cpf" name="cpf"  placeholder="xxxxxxxxx-xx">
+			
+        </p>
+        <p>Senha:
+            <input type="password" id="senha1" name="" placeholder=" Digite sua senha">
+        </p>
+        <p>Confirmação de senha:
+            <input type="password" id="senha2" name="" placeholder="Digite novamente sua senha">
+        </p>
+        <!-- <input class="botao-aluno" type="submit" onclick="validaCPF(CPF)" value="Finalizar"> -->
+        <input class="botao-aluno" type="submit" onclick="validaDados()" value="Finalizar">
+    </form>
+    </div>
+
+</body>
+</html>
